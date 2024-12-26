@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .carousel {
@@ -22,6 +23,8 @@ body {
     position: absolute;
     inset: 0;
     opacity: 0;
+    transition: 1500ms opacity ease-in-out;
+    transition-delay: 0ms;
 }
 .slide > img {
     display:block;
@@ -33,6 +36,8 @@ body {
 
 .slide[data-active] {
     opacity: 1;
+    z-index: 1;
+    transition-delay: 0;
 }
 
 .carousel-button {
@@ -65,7 +70,7 @@ body {
 }
 
 .carousel-button.next {
-    left: 1rem;
+    right: 1rem;
 } 
 /* Reset body margins and padding 
 body, html {
